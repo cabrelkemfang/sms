@@ -1,0 +1,25 @@
+
+
+<mat-card class="example-card">
+  <p  class="mat-elevation-z10">Ammonce</p>
+    <br>
+  <mat-card-content>
+    <form class="example-form" #form="ngForm" (ngSubmit)="onSubmit(form.value)" >
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Title"  name="title" required ngModel>
+        <mat-error>
+          Please the Title required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="Message" name="message" required ngModel rows="4" cols="50"></textarea>
+        <mat-error>
+          Please the Message required
+        </mat-error>
+      </mat-form-field>
+      <button mat-raised-button class="color1" type="submit" [disabled]="!form.form.valid" class="example-full-width">Send Annonce</button>
+    </form>
+
+  </mat-card-content>
+</mat-card>
